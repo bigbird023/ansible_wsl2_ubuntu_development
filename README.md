@@ -43,3 +43,10 @@ cat ~/.ssh/id_rsa.pub
 ```
 
  ## Step 5
+
+ execute ansible playbook `setup.yml` with the following command
+
+ ```
+ export ANSIBLE_NOCOWS=1
+ansible-playbook -K -i localhost setup.yml
+```
