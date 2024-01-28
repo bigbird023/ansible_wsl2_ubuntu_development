@@ -19,6 +19,38 @@
   roles: # order does matter
     - role: "compressiontools"
     - role: "scm"
-    - role: "gantsign.sdkman"
-      sdkman_users:
-        - "bigbird023"
+    # - role: "gantsign.sdkman"
+    #   sdkman_users:
+    #     - "bigbird023"
+    - role: "comcast.sdkman"
+      sdkman_user: bigbird023
+      sdkman_group: bigbird023
+      sdkman_auto_answer: true
+      sdkman_update: true
+      # sdkman_uninstall_packages:
+      #   - { candidate: groovy, version: 1.8.9 }
+      sdkman_install_packages:
+        - { candidate: java, version: 8.0.402-zulu }
+        - { candidate: java, version: 11.0.22-zulu }
+        - { candidate: maven, version: 3.6.3 }
+      #   # Use this syntax if you want SDKMAN to be aware of packages installed *without* SDKMAN, e.g. Oracle JDKs
+      #   - { candidate: java, version: 1.8.0-oracle, localpath: /Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk }
+      sdkman_defaults:
+        maven: 3.6.3
+        java: 11.0.22-zulu
+      sdkman_flush_caches_before:
+        - temp
+      sdkman_flush_caches_after:
+        - archives
+        - broadcast
+        - candidates
+        - temp
+      sdkman_offline_mode: false
+      # sdkman_update_alternatives:
+      #   - candidate: java
+      #     name: java
+      #     link: /usr/bin/java
+      #   - candidate: java
+      #     name: javac
+      #     link: /usr/bin/javac
+
