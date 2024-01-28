@@ -27,3 +27,41 @@ ansible_minimum_version: 2.6.0
 # # sdkman_users:
 # #   - example_username1
 # #   - example_username2
+
+
+######################################################## GoLang
+# Go language SDK version number
+golang_version: '1.21.6'
+
+# Mirror to download the Go language SDK redistributable package from
+golang_mirror: 'https://storage.googleapis.com/golang'
+
+# Base installation directory the Go language SDK distribution
+golang_install_dir: '/opt/go/{{ golang_version }}'
+
+# Directory to store files downloaded for Go language SDK installation
+golang_download_dir: "{{ x_ansible_download_dir | default(ansible_facts.env.HOME + '/.ansible/tmp/downloads') }}"
+
+# Location for GOPATH environment variable
+golang_gopath:
+
+######################################################## GO-Tools
+delve_version: latest
+errcheck_version: latest
+git_bug_version: latest
+go_header_version: latest
+go_mutesting_version: latest
+go_wrk_version: 0.9
+gocomplete_version: latest
+gokart_version: latest
+gopkgs_version: latest
+gopls_version: latest
+govulncheck_version: latest
+gremlins_version: latest
+impl_version: latest
+lichen_version: latest
+oapi_codegen_version: latest
+pprof_version: latest
+protolint_version: latest
+revgrep_version: latest
+staticcheck_version: 2022.1

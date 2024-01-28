@@ -1,10 +1,10 @@
 ---
 roles:
-  # - name: gantsign.sdkman
-  #   src: git@github.com:gantsign/ansible_role_sdkman.git
-  #   version: master
-  #   scm: git
   - name: comcast.sdkman
     src: git@github.com:Comcast/ansible-sdkman.git
+    version: master
+    scm: git
+  - name: ansible-role-golang
+    src: git@github.com:gantsign/ansible-role-golang.git
     version: master
     scm: git
