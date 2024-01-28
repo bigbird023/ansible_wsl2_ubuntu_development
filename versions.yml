@@ -1,0 +1,6 @@
+---
+# versions.yml
+
+#Ansible
+ansible_minimum_version: 2.6.0
+

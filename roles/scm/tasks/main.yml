@@ -1,0 +1,27 @@
+---
+#
+
+- name: "install git"
+  apt: 
+    name: "{{ packages }}"
+  vars:
+    packages:
+    - git
+    - git-doc
+    - git-svn
+  tags:
+  - scm
+  - git
+
+
+- name: "install Subversion"
+  apt:
+    name: "{{ packages }}"
+    state: "latest"
+  vars:
+    packages:
+    - "subversion"
+    - "libsvn-java"
+  tags:
+  - scm
+  - "subversion"
