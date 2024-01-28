@@ -1,0 +1,6 @@
+---
+roles:
+  - name: gantsign.sdkman
+    src: git@github.com:gantsign/ansible_role_sdkman.git
+    version: master
+    scm: git

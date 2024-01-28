@@ -15,8 +15,10 @@
   remote_user: ansible
   become: yes
   vars_files:
-    - versions.yml
+    - variables.yml
   roles: # order does matter
     - role: "compressiontools"
     - role: "scm"
-    
+    - role: "gantsign.sdkman"
+      sdkman_users:
+        - "bigbird023"

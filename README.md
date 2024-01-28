@@ -42,11 +42,18 @@ cat ~/.ssh/id_rsa.pub
  git clone git@github.com:bigbird023/workstation_setup.git
 ```
 
- ## Step 5
+## Step 5
+configure ansible remotes or requirements
 
- execute ansible playbook `setup.yml` with the following command
+```
+ansible-galaxy install -r requirements.yml --force
+```
 
- ```
- export ANSIBLE_NOCOWS=1
-ansible-playbook -K -i localhost setup.yml
+## Step 6
+
+execute ansible playbook `setup.yml` with the following command
+
+```
+export ANSIBLE_NOCOWS=1
+ansible-playbook -K -i localhost playbook.yml
 ```
