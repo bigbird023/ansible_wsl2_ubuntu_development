@@ -17,6 +17,7 @@
   vars_files:
     - variables.yml
   roles: # order does matter
+    - role: "sys"
     - role: "compressiontools"
     - role: "scm"
     # - role: "gantsign.sdkman"
@@ -54,5 +55,7 @@
       #     name: javac
       #     link: /usr/bin/javac
     - role: ansible-role-golang
+      golang_gopath: '$HOME/workspace-go'
     #- role: go-tools
+    - role: docker
 
